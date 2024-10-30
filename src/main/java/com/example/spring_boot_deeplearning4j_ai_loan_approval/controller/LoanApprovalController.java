@@ -1,14 +1,17 @@
 package com.example.spring_boot_deeplearning4j_ai_loan_approval.controller;
 
-import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
-import org.nd4j.linalg.factory.Nd4j;
-import org.nd4j.linalg.api.ndarray.INDArray;
-import org.springframework.web.bind.annotation.*;
-
-import com.example.spring_boot_deeplearning4j_ai_loan_approval.dto.LoanApplication;
-
 import java.io.File;
 import java.io.IOException;
+
+import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.factory.Nd4j;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.spring_boot_deeplearning4j_ai_loan_approval.dto.LoanApplication;
 
 @RestController
 @RequestMapping("/loan")
