@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "578a2adc-3ad9-4340-a8d7-7dd9ee60ff5e",
+		"name": "Deep Learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21580616"
+	},
+	"item": [
+		{
+			"name": "Classify numbers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/Users/julian.henao.marin/Downloads/testSet/img_1.jpg"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8987/api/image-classification/classify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8987",
+					"path": [
+						"api",
+						"image-classification",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loan Approval",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"creditScore\": 720,\n    \"income\": 45000,\n    \"loanAmount\": 50000,\n    \"employmentStatus\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loan/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
